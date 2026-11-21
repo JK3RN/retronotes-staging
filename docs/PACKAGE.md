@@ -7,9 +7,9 @@ Das Quellpaket enthält den Offline-Installer, Python-Quellen, Tests, Anleitunge
 Prüfe zunächst das Archiv mit der mitgelieferten äußeren Prüfsumme. Entpacke es danach und prüfe den enthaltenen Dateisatz. Die innere Prüfsummenliste ist selbst durch die äußere Prüfsumme abgesichert.
 
 ```sh
-sha256sum -c retronotes-0.2.0-rc1.tar.gz.sha256
-tar -xzf retronotes-0.2.0-rc1.tar.gz
-cd retronotes-0.2.0-rc1
+sha256sum -c retronotes-0.2.0-rc2.tar.gz.sha256
+tar -xzf retronotes-0.2.0-rc2.tar.gz
+cd retronotes-0.2.0-rc2
 sha256sum -c SHA256SUMS
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
 ```
@@ -18,15 +18,15 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
 
 ## Archiv reproduzieren
 
-Verwende GNU tar und gzip aus einem Verzeichnis, das den geprüften Paket-Root `retronotes-0.2.0-rc1` enthält. Das Manifest bestimmt den Inhalt, Dateimodi stammen aus dem Paket, Archivpfade, Reihenfolge, Zeitstempel und numerische Besitzer werden normalisiert. Installationsreste oder lokale Git-Daten fließen dadurch nicht ein.
+Verwende GNU tar und gzip aus einem Verzeichnis, das den geprüften Paket-Root `retronotes-0.2.0-rc2` enthält. Das Manifest bestimmt den Inhalt, Dateimodi stammen aus dem Paket, Archivpfade, Reihenfolge, Zeitstempel und numerische Besitzer werden normalisiert. Installationsreste oder lokale Git-Daten fließen dadurch nicht ein.
 
 ```sh
-cd retronotes-0.2.0-rc1
+cd retronotes-0.2.0-rc2
 LC_ALL=C tar --format=ustar --mtime='@0' --owner=0 --group=0 --numeric-owner \
-  --mode='u+rw,go+r,go-w' --no-recursion --transform='s,^,retronotes-0.2.0-rc1/,' \
-  -cf - -T MANIFEST.txt | gzip -n -9 > ../retronotes-0.2.0-rc1.tar.gz
+  --mode='u+rw,go+r,go-w' --no-recursion --transform='s,^,retronotes-0.2.0-rc2/,' \
+  -cf - -T MANIFEST.txt | gzip -n -9 > ../retronotes-0.2.0-rc2.tar.gz
 cd ..
-sha256sum retronotes-0.2.0-rc1.tar.gz
+sha256sum retronotes-0.2.0-rc2.tar.gz
 ```
 
 ## Manuelle Abnahme mit getrenntem Notizordner

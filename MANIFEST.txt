@@ -1,6 +1,7 @@
 .gitignore
 LICENSE
 MANIFEST.txt
+README.en.md
 README.md
 SHA256SUMS
 docs/FIELD_MANUAL.md

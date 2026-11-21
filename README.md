@@ -1,5 +1,7 @@
 # RetroNotes
 
+Deutsch · [English](README.en.md)
+
 Ein nativer GTK-Editor für lokale Markdown-Notizen unter Linux. Fenster öffnen, schreiben und mit der Tastatur zur nächsten Notiz wechseln. RetroNotes speichert automatisch. Deine Notizen bleiben normale Markdown-Dateien, die auch andere Editoren öffnen können.
 
 ![RetroNotes-Editor mit dem synthetischen Aurora-Feldprotokoll, Markdown-Hervorhebung und Speicherstatus](docs/showcase/editor.webp)

@@ -1,7 +1,8 @@
-# RetroNotes 0.2.0 · Release Candidate
+# RetroNotes 0.2.0-rc2 · Release Candidate
 
-RetroNotes ist ein lokaler GTK-Notizblock für UTF-8-Markdown. Der erste Release-Kandidat bündelt den bestehenden Editor, Autosave, Notizindex und Suche in der aktuellen Notiz, Quick Entry sowie den Offline-Installer.
+RetroNotes ist ein lokaler GTK-Notizblock für UTF-8-Markdown. Der Release-Kandidat bündelt den bestehenden Editor, Autosave, Notizindex und Suche in der aktuellen Notiz, Quick Entry sowie den Offline-Installer.
 
+- Das README ist auf Deutsch und Englisch verfügbar.
 - Neue Notizen sind mit Modus `0600` privat. Neue Notizordner und Papierkörbe verwenden Modus `0700`.
 - Der Notizindex ignoriert Symlinks. Lesen und Schreiben prüfen, dass die Zieldatei eine reguläre Markdown-Datei im gewählten Ordner ist.
 - Autosave überprüft den Dateistand erneut unmittelbar vor dem atomaren Austausch. Bei erkannten Konflikten bleibt der Entwurf im Fenster.

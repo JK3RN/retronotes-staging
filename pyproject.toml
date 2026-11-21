@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retronotes"
+version = "0.2.0"
+description = "Keyboard-first Markdown phosphor instrument"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = ["PyGObject>=3.42"]
+
+[project.scripts]
+rnote = "retronotes.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["retronotes*"]
